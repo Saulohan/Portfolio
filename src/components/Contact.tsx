@@ -44,7 +44,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
 };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-slate-900 to-gray-900 text-white">
+    <section className="py-20 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16">
           Vamos Conversar?
@@ -53,39 +53,39 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
             <h3 className="text-2xl font-bold mb-8">Entre em Contato</h3>
-            <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
               Estou sempre aberto a novas oportunidades e projetos interessantes. 
               Se você tem uma ideia ou quer discutir uma colaboração, não hesite em entrar em contato!
             </p>
             
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 text-white bg-blue-600 rounded-lg flex items-center justify-center">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-semibold">Email</p>
-                  <p className="text-gray-300">saulolohan09@gmail.com</p>
+                  <p className="font-semibold text-secondary-foreground">Email</p>
+                  <p className="text-muted-foreground">saulolohan09@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 text-white bg-green-600 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-semibold">WhatsApp</p>
-                  <p className="text-gray-300">+55 (88) 99699-6447</p>
+                  <p className="font-semibold text-secondary-foreground">WhatsApp</p>
+                  <p className="text-muted-foreground">+55 (88) 99699-6447</p>
                 </div>
               </div>
               
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-semibold">Localização</p>
-                  <p className="text-gray-300">Russas, Ceará, Brasil</p>
+                  <p className="font-semibold text-secondary-foreground">Localização</p>
+                  <p className="text-muted-foreground">Russas, Ceará, Brasil</p>
                 </div>
               </div>
             </div>
@@ -113,15 +113,15 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
             </div>
           </div>
           
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6">Envie uma Mensagem</h3>
+          <div className="bg-card/50 dark:bg-white/5 backdrop-blur-sm border border-border rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-6 text-card-foreground">Envie uma Mensagem</h3>
             
             <form className="space-y-6 form" onSubmit={sendEmail} ref={formRef}>
               <div>
-                <label className="block text-sm font-medium mb-2">Nome</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">Nome</label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
                   placeholder="Seu nome completo"
                   name="from_name"
                   value={name}
@@ -130,10 +130,10 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2">Email</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">Email</label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
                   placeholder="seu@email.com"
                   name="email"
                   value={email}
@@ -142,10 +142,10 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2">Assunto</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">Assunto</label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-blue-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
                   placeholder="Assunto da mensagem"
                   name="title"
                   value={title}
@@ -154,10 +154,10 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2">Mensagem</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">Mensagem</label>
                 <textarea 
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:border-blue-400 focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
                   placeholder="Sua mensagem..."
                   name="message"
                   value={message}

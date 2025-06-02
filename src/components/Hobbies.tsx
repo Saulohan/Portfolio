@@ -42,13 +42,13 @@ const Hobbies = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
           Hobbies & Interesses
         </h2>
         
-        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto text-lg">
+        <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-lg">
           Quando não estou programando, gosto de explorar outras paixões que contribuem 
           para meu crescimento pessoal e criatividade. Acredito que hobbies diversificados 
           enriquecem nossa perspectiva profissional.
@@ -58,17 +58,17 @@ const Hobbies = () => {
           {hobbies.map((hobby, index) => (
             <div 
               key={hobby.name}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              className="bg-card border border-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className={`w-16 h-16 bg-gradient-to-r ${hobby.color} rounded-xl flex items-center justify-center text-white mb-4 mx-auto`}>
                 {hobby.icon}
               </div>
               
-              <h3 className="text-xl font-bold text-center mb-3 text-gray-800">
+              <h3 className="text-xl font-bold text-center mb-3 text-card-foreground">
                 {hobby.name}
               </h3>
               
-              <p className="text-gray-600 text-center leading-relaxed">
+              <p className="text-muted-foreground text-center leading-relaxed">
                 {hobby.description}
               </p>
             </div>

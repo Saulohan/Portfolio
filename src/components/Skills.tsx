@@ -42,9 +42,9 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Conhecimentos & Tecnologias
         </h2>
         
@@ -52,13 +52,13 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={category.title}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-            >
+              className="bg-white dark:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              >
               <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center text-white mb-4 mx-auto`}>
                 {category.icon}
               </div>
               
-              <h3 className="text-xl font-bold text-center mb-4 text-gray-800">
+              <h3 className="text-xl font-bold text-center mb-4 text-gray-900 dark:text-white">
                 {category.title}
               </h3>
               
@@ -66,7 +66,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skill}
-                    className="bg-gray-50 rounded-lg px-3 py-2 text-center text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                    className="bg-gray-100 dark:bg-slate-600 rounded-lg px-3 py-2 text-center text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-500 transition-colors duration-200"
                   >
                     {skill}
                   </div>

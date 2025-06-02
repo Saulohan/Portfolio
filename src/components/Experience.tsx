@@ -56,7 +56,7 @@ const Experience = () => {
       {
         title: "Tech Lead",
         period: "2024 - 2025",
-        description: `iderança técnica da equipe de desenvolvimento, com foco na definição de arquitetura
+        description: `Liderança técnica da equipe de desenvolvimento, com foco na definição de arquitetura
           escalável e sustentável, revisão de código, mentoria e suporte técnico aos desenvolvedores. 
           Responsável pela escolha de tecnologias, gerenciamento da esteira de CI/CD com Azure, 
           implementação de testes automatizados (unitários, integração e E2E), e promoção de boas 
@@ -131,26 +131,26 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
           Experiência & Certificações
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Trilha Profissional</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Trilha Profissional</h3>
             <div className="space-y-12">
               {experiences.map((company, companyIndex) => (
                 <div key={companyIndex} className="relative">
-                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 shadow-lg">
+                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                      <div className="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
                         <TrendingUp className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-gray-800">{company.company}</h4>
-                        <div className="flex items-center gap-1 text-gray-600">
+                        <h4 className="text-xl font-bold text-gray-900 dark:text-white">{company.company}</h4>
+                        <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
                           <MapPin className="w-4 h-4" />
                           <span>{company.location}</span>
                         </div>
@@ -164,30 +164,30 @@ const Experience = () => {
                         
                         return (
                           <Collapsible key={positionIndex} open={isOpen} onOpenChange={() => togglePosition(positionId)}>
-                            <div className="relative pl-6 border-l-2 border-blue-200 last:border-transparent">
-                              <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full" />
+                            <div className="relative pl-6 border-l-2 border-blue-500 dark:border-blue-600">
+                            <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 dark:bg-blue-500 rounded-full" />
                               
-                              <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-                                <CollapsibleTrigger className="w-full p-4 text-left hover:bg-gray-50 transition-colors rounded-lg">
+                              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+                                <CollapsibleTrigger className="w-full p-4 text-left hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors rounded-lg">
                                   <div className="flex items-center justify-between">
                                     <div>
-                                      <h5 className="text-lg font-semibold text-gray-800">{position.title}</h5>
-                                      <div className="flex items-center gap-1 mt-1 text-sm text-gray-600">
+                                      <h5 className="text-lg font-semibold text-gray-900 dark:text-white">{position.title}</h5>
+                                      <div className="flex items-center gap-1 mt-1 text-sm text-gray-600 dark:text-gray-400">
                                         <Calendar className="w-4 h-4" />
                                         <span>{position.period}</span>
                                       </div>
                                     </div>
-                                    <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+                                    <ChevronDown className={`w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
                                   </div>
                                 </CollapsibleTrigger>
                                 
                                 <CollapsibleContent className="px-4 pb-4">
-                                  <div className="pt-2 border-t border-gray-100">
-                                    <p className="text-gray-700 mb-4 leading-relaxed">{position.description}</p>
+                                  <div className="pt-2 border-t border-gray-200 dark:border-gray-700">
+                                    <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{position.description}</p>
                                     
                                     <div className="flex flex-wrap gap-2">
                                       {position.technologies.map((tech, techIndex) => (
-                                        <span key={techIndex} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        <span key={techIndex} className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
                                           {tech}
                                         </span>
                                       ))}
@@ -207,13 +207,13 @@ const Experience = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Certificações</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Certificações</h3>
             <div className="space-y-6">
               {certifications.map((cert, index) => (
-                <div key={index} className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-lg font-bold text-gray-800 mb-2">{cert.title}</h4>
-                  <p className="text-green-600 font-semibold mb-2">{cert.institution}</p>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                <div key={index} className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{cert.title}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">{cert.institution}</p>
+                  <span className="bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm font-medium">
                     {cert.status}
                   </span>
                   <div>
