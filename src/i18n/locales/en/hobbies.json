@@ -1,0 +1,32 @@
+{
+  "hobbies": {
+    "title": "My Hobbies",
+    "intro": "When I'm not coding, I enjoy exploring other passions that contribute to my personal growth and creativity. I believe diverse hobbies enrich our professional perspective.",
+    "items": {
+      "programming": {
+        "name": "Programming",
+        "description": "Creating personal projects, continuous learning, and contributing to open source communities."
+      },
+      "games": {
+        "name": "Strategic Games",
+        "description": "Improving logical thinking, focus, and decision-making in competitive environments."
+      },
+      "workout": {
+        "name": "Weight Training",
+        "description": "Discipline and consistency with regular workouts for physical and mental well-being."
+      },
+      "reading": {
+        "name": "Reading",
+        "description": "Exploring technical books, science fiction, and fantasy that stimulate creativity and imagination."
+      },
+      "running": {
+        "name": "Running",
+        "description": "Aerobic exercise to improve endurance, focus, and mental health."
+      },
+      "coffee": {
+        "name": "Coffee & Technology",
+        "description": "The ideal combination for focus and productivity during development sessions."
+      }
+    }
+  }
+}

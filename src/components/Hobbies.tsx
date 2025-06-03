@@ -1,42 +1,38 @@
 
 import { Code, GamepadIcon, HeartPulse, BookOpen, DumbbellIcon, Coffee } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Hobbies = () => {
-    const hobbies = [
+  const { t: textTranslated, i18n } = useTranslation(('hobbies'));
+  const hobbies = [
     {
-      name: "Programação",
+      key: "programming",
       icon: <Code className="w-8 h-8" />,
-      description: "Criação de projetos pessoais, aprendizado contínuo e contribuição em comunidades open source.",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Jogos Estratégicos",
+      key: "games",
       icon: <GamepadIcon className="w-8 h-8" />,
-      description: "Aprimoramento de raciocínio lógico, foco e tomada de decisão em ambientes competitivos.",
       color: "from-purple-500 to-pink-500"
     },
     {
-      name: "Musculação",
-      icon: <DumbbellIcon className="w-8 h-8" />, 
-      description: "Disciplina e constância com treinos regulares para bem-estar físico e mental.",
+      key: "workout",
+      icon: <DumbbellIcon className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      name: "Leitura",
+      key: "reading",
       icon: <BookOpen className="w-8 h-8" />,
-      description: "Exploração de livros técnicos, ficção científica, fantasia, que estimulam a criatividade e a imaginação.",
       color: "from-orange-500 to-red-500"
     },
     {
-      name: "Corrida",
-      icon: <HeartPulse className="w-8 h-8" />, 
-      description: "Prática de exercícios aeróbicos para aumentar a resistência, foco e saúde mental.",
+      key: "running",
+      icon: <HeartPulse className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      name: "Café & Tecnologia",
+      key: "coffee",
       icon: <Coffee className="w-8 h-8" />,
-      description: "Combinação ideal para concentração e produtividade durante sessões de desenvolvimento.",
       color: "from-amber-500 to-orange-500"
     }
   ];
@@ -45,19 +41,17 @@ const Hobbies = () => {
     <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-          Hobbies & Interesses
+          {textTranslated("hobbies.title")}
         </h2>
         
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-lg">
-          Quando não estou programando, gosto de explorar outras paixões que contribuem 
-          para meu crescimento pessoal e criatividade. Acredito que hobbies diversificados 
-          enriquecem nossa perspectiva profissional.
+          {textTranslated("hobbies.intro")}
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {hobbies.map((hobby, index) => (
             <div 
-              key={hobby.name}
+              key={hobby.key}
               className="bg-card border border-border rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className={`w-16 h-16 bg-gradient-to-r ${hobby.color} rounded-xl flex items-center justify-center text-white mb-4 mx-auto`}>
@@ -65,11 +59,11 @@ const Hobbies = () => {
               </div>
               
               <h3 className="text-xl font-bold text-center mb-3 text-card-foreground">
-                {hobby.name}
+                {textTranslated(`hobbies.items.${hobby.key}.name`)}
               </h3>
               
               <p className="text-muted-foreground text-center leading-relaxed">
-                {hobby.description}
+                {textTranslated(`hobbies.items.${hobby.key}.description`)}
               </p>
             </div>
           ))}

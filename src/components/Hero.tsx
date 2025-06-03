@@ -2,10 +2,11 @@
 import { Github, Linkedin, Mail, Instagram, MapPin, CalendarDays, Moon, Sun } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import ThemeToggle from './ThemeToggle';
-
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t: textTranslated, i18n } = useTranslation(('hero'));
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-300 via-blue-600 to-cyan-400 dark:from-slate-900 dark:via-blue-900 dark:to-slate-900 text-black dark:text-white relative overflow-hidden ">
       <div className="absolute inset-0 opacity-20">
@@ -26,12 +27,9 @@ const Hero = () => {
           Saulo Lohan
         </h1>
         
-        <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-700">
-          Graduando em <span className="text-blue-400 font-semibold">Analise e Desenvolvimento de Sistemas</span> |<br/> 
-          Especialista em <span className="text-purple-400 font-semibold">Inovação e Transformação Digital</span> |<br/>
-          👨‍💻 “<span className="font-semibold text-green-300">Desenvolvedor Full Stack</span> construindo soluções escaláveis com tecnologia e propósito” |<br/>
-          🧠 “<span className="font-semibold text-yellow-300">Tech Lead</span> apaixonado por desenvolvimento, liderança e transformação digital”
-        </p>
+        <div className="text-xl md:text-2xl text-gray-800 dark:text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in delay-700"
+          dangerouslySetInnerHTML={{ __html: textTranslated("hero.description") }}
+        />
                 
         <div className="text-gray-800 dark:text-gray-400 mb-8 animate-fade-in delay-900">
           <div className="flex items-center justify-center gap-2 mb-2">

@@ -1,6 +1,8 @@
 import { useIsMobile } from "@/hooks/use-mobile";
 import ThemeToggle from "../ThemeToggle";
 import { useEffect, useRef, useState } from "react";
+import i18n from "@/i18n/i18n";
+import LanguageSelector from "./languageSelector";
 
 export function ToggleSidebar() {
 
@@ -8,6 +10,7 @@ export function ToggleSidebar() {
       const isMobile = useIsMobile();
       const menuRef = useRef<HTMLDivElement>(null);
       const buttonRef = useRef<HTMLButtonElement>(null);
+      const changeLanguage = (lng: string) => { i18n.changeLanguage(lng); console.log(lng)};
       
       useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -31,7 +34,10 @@ export function ToggleSidebar() {
     <>
         {!isMobile ? (
             <>
-            <ThemeToggle className="fixed top-0 right-0 m-4 z-50" />
+            <div className="fixed top-0 right-0 m-4 z-50 flex justify-end mb-6">
+                <LanguageSelector  onChangeLanguage={changeLanguage} />
+            </div>
+            <ThemeToggle className="fixed bottom-0 right-0 m-4 z-50" />
             <a
                 href="https://buymeacoffee.com/saulohan"
                 target="_blank"
@@ -59,19 +65,22 @@ export function ToggleSidebar() {
 
                 <div 
                 ref={menuRef}
-                className={`fixed top-0 right-0 h-full w-20  bg-gray-200 bg-opacity-25 dark:bg-slate-900 dark:bg-opacity-50  shadow-lg p-6 pt-20  transition-transform duration-300 z-40
+                className={`fixed top-0 right-0 h-full w-60  bg-gray-200 bg-opacity-25 dark:bg-slate-900 dark:bg-opacity-50  shadow-lg p-6 pt-20  transition-transform duration-300 z-40
                     ${isOpen ?  '-translate-x-0' : 'translate-x-full'}`}
                 >   
                 <div className="">
-                <ThemeToggle className="fixed bottom-0 right-0 m-4 z-50" />
-                <a
-                    href="https://buymeacoffee.com/saulohan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title='Compre meu café'
-                >
-                    <img src="/images/coffe.png" alt="café" className="w-14 h-14 fixed top-0 right-0 m-4 z-50 transition" />
-                </a>    
+                    <div className="fixed bottom-0 right-0 m-4 z-50 flex justify-end mb-6">
+                        <LanguageSelector  onChangeLanguage={changeLanguage} />
+                    </div>
+                    <ThemeToggle className="fixed bottom-10 right-0 m-4 z-50" />
+                    <a
+                        href="https://buymeacoffee.com/saulohan"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title='Compre meu café'
+                    >
+                        <img src="/images/coffe.png" alt="café" className="w-14 h-14 fixed top-0 right-0 m-4 z-50 transition" />
+                    </a>    
                 </div>     
                 </div>
             </>

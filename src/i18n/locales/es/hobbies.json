@@ -1,0 +1,32 @@
+{
+  "hobbies": {
+    "title": "Mis pasatiempos",
+    "intro": "Cuando no estoy programando, me gusta explorar otras pasiones que contribuyen a mi crecimiento personal y creatividad. Creo que tener pasatiempos diversos enriquece nuestra perspectiva profesional.",
+    "items": {
+      "programming": {
+        "name": "Programación",
+        "description": "Creación de proyectos personales, aprendizaje continuo y contribución en comunidades de código abierto."
+      },
+      "games": {
+        "name": "Juegos Estratégicos",
+        "description": "Mejora del pensamiento lógico, enfoque y toma de decisiones en entornos competitivos."
+      },
+      "workout": {
+        "name": "Entrenamiento con Pesas",
+        "description": "Disciplina y constancia con entrenamientos regulares para el bienestar físico y mental."
+      },
+      "reading": {
+        "name": "Lectura",
+        "description": "Exploración de libros técnicos, ciencia ficción y fantasía que estimulan la creatividad y la imaginación."
+      },
+      "running": {
+        "name": "Correr",
+        "description": "Práctica de ejercicios aeróbicos para aumentar la resistencia, el enfoque y la salud mental."
+      },
+      "coffee": {
+        "name": "Café y Tecnología",
+        "description": "Combinación ideal para la concentración y productividad durante sesiones de desarrollo."
+      }
+    }
+  }
+}

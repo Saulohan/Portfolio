@@ -2,6 +2,15 @@
 import { Calendar, MapPin, TrendingUp, ChevronDown } from 'lucide-react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import experienceData from '../data/experienceData.json';
+
+interface Position {
+  title: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
 
 const Experience = () => {
 
@@ -15,131 +24,38 @@ const Experience = () => {
     );
   };
 
-  const experiences = [
-    {
-      company: "Forlogic",
-      location: "Remoto",
-      positions: [
-        {
-          title: "FullStack Developer",
-          period: "2025 - Atualmente",
-          description: `Desenvolvimento e evolução de novos produtos, utilizando arquitetura CQRS com
-            ASP.NET Core e Entity Framework no back-end, e TypeScript, Angular e componentes Syncfusion 
-            no front-end. Mmanutenção e suporte a sistemas legados com tecnologias como ASP.NET MVC e 
-            Ext JS.`,
-          technologies: ["Angular", ".Net", "Azure", "SQL Server"]
-        }
-      ]
-    },
-    {
-      company: "Resolutis Core",
-      location: "Remoto",
-      positions: [
-        {
-          title: "CTO / Desenvolvedor e Co-Fundador",
-          period: "2023 - Atualmente",
-          description: `Planejamento e definição da arquitetura garantindo escalabilidade, 
-            segurança e alta disponibilidade. Modelagem e implementação de banco de dados PostgreSQL, 
-            incluindo diagramação e otimização de queries. Automação de processos com CI/CD para 
-            integração e entrega contínua. Desenvolvimento backend com .NET, aplicando princípios SOLID e 
-            Clean Architecture. Desenvolvimento frontend com ReactJS e Tailwind para interfaces 
-            responsivas e performáticas. Liderança técnica e decisões estratégicas alinhadas aos 
-            objetivos de negócio.`,
-          technologies: [".NET", "PostgreSQL", "ReactJS", "Tailwind", "CI/CD"]
-        }
-      ]
-    },
-    {
-      company: "FitBank 450",
-      location: "Remoto",
-      positions: [
-      {
-        title: "Tech Lead",
-        period: "2024 - 2025",
-        description: `Liderança técnica da equipe de desenvolvimento, com foco na definição de arquitetura
-          escalável e sustentável, revisão de código, mentoria e suporte técnico aos desenvolvedores. 
-          Responsável pela escolha de tecnologias, gerenciamento da esteira de CI/CD com Azure, 
-          implementação de testes automatizados (unitários, integração e E2E), e promoção de boas 
-          práticas de desenvolvimento. Condução de reuniões técnicas, workshops, avaliação de riscos 
-          técnicos e facilitação da comunicação entre times. Atuação estratégica para garantir a 
-          escalabilidade, performance e alinhamento com os objetivos do negócio. Assumiu a coordenação 
-          temporária durante ausência da liderança formal.`,
-        technologies: ["Liderança Técnica", "Desenvolvimento de Software", "Desenvolvimento Full Stack", 
-          "Gestão de Projetos", "Revisão de Código", "Boas Práticas de Programação", "Clean Code", 
-          "Princípios SOLID", "Scrum", "Metodologias Ágeis", ".NET Framework", "C#", "JavaScript", 
-          "HTML5", "jQuery", "Razor (ASP.NET)", "Postman", "Azure DevOps", "Git", "Redis", "RabbitMQ", 
-          "Elasticsearch", "Microsserviços", "Microsoft SQL Server", "Banco de Dados"]
-      },
-      {
-        title: "Desenvolvedor de Sistemas",
-        period: "2022 - 2024",
-        description: `Desenvolvimento de sistemas e microsserviços escaláveis e de alta performance. 
-          Implementação e manutenção de interfaces frontend utilizando CSHTML, JavaScript e arquitetura MVC.
-          Criação, otimização e segurança de APIs REST. Atuação com .NET, C#, SQL Server,
-          MongoDB e metodologias ágeis. Aplicação de princípios SOLID, 
-          Clean Code e padrões de projeto (Builder, Strategy, Factory, Singleton, Iterator).
-          Utilização de RabbitMQ para comunicação assíncrona entre microsserviços e ElasticSearch
-          para registro e monitoramento de logs. Implementação de testes unitários para garantir
-          a qualidade do código.`,
-        technologies: [
-          ".NET Core",".NET Framework","C#","JavaScript","HTML5","CSS","jQuery","Razor (ASP.NET)","CSHTML",
-          "Microsoft SQL Server","MongoDB","RabbitMQ","Elasticsearch","Azure DevOps Server","Postman","APIs RESTful","Microsserviços",
-          "Clean Code","Princípios SOLID","Metodologias Ágeis (Scrum e Kanban)" 
-        ]
-      }
-      ]
-    }
-  ];
+  const { t: textTranslated, i18n } = useTranslation('experiences');
 
-  const certifications = [
-    {
-      title: "Impulso FullStack Web Developer",
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/A9FBEADE.pdf"
-    },
-    {
-      title: "Codelaany | 1st Edition", 
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/5F0DE057.pdf"
-    },
-    {
-      title: "Fortaleza dos CodeMiners", 
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/237F5855.pdf"
-    },
-    {
-      title: "Formação Scrum Master Certification",
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/D801EA92.pdf"
-    },
-    {
-      title: "Formação HTML Web Developer",
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/E00FF4A2.pdf"
-    },
-    {
-      title: "Formação JavaScript Developer",
-      institution: "Digital Innovation One",
-      status: "Concluído",
-      linkCertificate: "https://hermes.dio.me/certificates/70C299D3.pdf"
-    }
-  ];
+  const experiences = experienceData.items.map(item => {
+    return {
+      id: item.id,
+      company: textTranslated(`experiences.companies.${item.name}.company`),
+      location: textTranslated(`experiences.companies.${item.name}.location`),
+      currently: item.currently,
+      positions: textTranslated(`experiences.companies.${item.name}.positions`, { returnObjects: true }) as Position[]
+    };
+  });
+
+  const certifications = experienceData.certifications.map(item => {
+    return {
+      id: item.id,
+      title: textTranslated(`certifications.${item.id}.title`),
+      institution: item.institution,
+      status: textTranslated(`certifications.${item.id}.status`),
+      linkCertificate: item.linkCertificate
+    };
+  });
 
   return (
     <section className="py-20 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-          Experiência & Certificações
+          {textTranslated(`experiences.title`)}
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Trilha Profissional</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">{textTranslated(`experiences.subTitle`)}</h3>
             <div className="space-y-12">
               {experiences.map((company, companyIndex) => (
                 <div key={companyIndex} className="relative">
@@ -207,7 +123,7 @@ const Experience = () => {
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Certificações</h3>
+            <h3 className="text-2xl font-bold mb-8 text-gray-900 dark:text-white">{textTranslated(`certifications.subTitle`)}</h3>
             <div className="space-y-6">
               {certifications.map((cert, index) => (
                 <div key={index} className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-purple-900/20 dark:to-blue-900/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700">

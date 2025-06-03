@@ -1,7 +1,11 @@
 
 import {  Database, Cloud, Smartphone, Globe, Server, Settings } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+  const { t: textTranslated, i18n } = useTranslation(('skills'));
+  const skillData = textTranslated('skills', { returnObjects: true });
+
   const skillCategories = [
     {
       title: "Frontend",
@@ -34,7 +38,7 @@ const Skills = () => {
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Infraestrutura e Performance",
+      title: "Infrastructure & Performance",
       icon: <Settings className="w-8 h-8" />,
       skills: ["Redis", "Elasticsearch", "RabbitMQ"],
       color: "from-gray-500 to-slate-500"
@@ -45,7 +49,7 @@ const Skills = () => {
     <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-          Conhecimentos & Tecnologias
+          {textTranslated(`skills.title`)}
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,0 +1,24 @@
+{
+  "competencies": {
+    "title": "Behavioral Competencies",
+    "labels": {
+      "proficiency": "Proficiency"
+    },
+    "items": {
+      "competencie1": "Leadership",
+      "competencie2": "Teamwork",
+      "competencie3": "Empathy",
+      "competencie4": "Humility",
+      "competencie5": "Proactivity",
+      "competencie6": "Determination",
+      "competencie7": "Optimization",
+      "competencie8": "Analysis",
+      "competencie9": "Communication",
+      "competencie10": "Resilience",
+      "competencie11": "Decision Making",
+      "competencie12": "Mentoring",
+      "competencie13": "Critical Thinking",
+      "competencie14": "Responsibility"
+    }
+  }
+}

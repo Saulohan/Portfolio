@@ -1,33 +1,27 @@
 
 import { CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import competenciesData from '../data/competenciesData.json';
 
 const Competencies = () => {
-  const competencies = [
-    { name: "Liderança", level: 100 },
-    { name: "Trabalho em equipe", level: 95 },
-    { name: "Empatia", level: 90 },
-    { name: "Humildade", level: 92 },
-    { name: "Proatividade", level: 94 },
-    { name: "Determinação", level: 91 },
-    { name: "Otimização", level: 87 },
-    { name: "Análise", level: 89 },
-    { name: "Comunicação", level: 86 },
-    { name: "Resiliência", level: 93 },
-    { name: "Tomada de decisão", level: 92 },
-    { name: "Mentoria", level: 94 },
-    { name: "Pensamento crítico", level: 93 },
-    { name: "Accountability", level: 92 },
-  ];
+  const { t: textTranslated, i18n } = useTranslation(('competencies'));
+  
+  const competencies = competenciesData.items.map(item => ({
+    id: item.id,
+    name: textTranslated(`competencies.items.${item.id}`),
+    level: item.level || 0,
+    proficiency: textTranslated(`competencies.labels.proficiency`)
+  }));
 
   return (
     <section className="py-20 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-          Competências Comportamentais
+          {textTranslated(`competencies.title`)}
         </h2>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-8xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {competencies.map((comp, index) => (
               <div key={comp.name} className="rounded-xl p-6 transition-all duration-300 bg-gray-200 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
                 <div className="flex items-center justify-between mb-4">
@@ -43,7 +37,7 @@ const Competencies = () => {
                 </div>
                 
                 <div className="flex justify-between text-sm text-muted-foreground">
-                  <span>Proficiência</span>
+                  <span>{comp.proficiency}</span>
                   <span>{comp.level}%</span>
                 </div>
               </div>

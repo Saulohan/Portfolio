@@ -1,0 +1,24 @@
+{
+  "competencies": {
+    "title": "Competencias Comportamentales",
+    "labels": {
+      "proficiency": "Competencia"
+    },
+    "items": {
+      "competencie1": "Liderazgo",
+      "competencie2": "Trabajo en equipo",
+      "competencie3": "Empatía",
+      "competencie4": "Humildad",
+      "competencie5": "Proactividad",
+      "competencie6": "Determinación",
+      "competencie7": "Optimización",
+      "competencie8": "Análisis",
+      "competencie9": "Comunicación",
+      "competencie10": "Resiliencia",
+      "competencie11": "Toma de decisiones",
+      "competencie12": "Mentoría",
+      "competencie13": "Pensamiento crítico",
+      "competencie14": "Responsabilidad"
+    }
+  }
+}

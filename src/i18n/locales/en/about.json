@@ -1,0 +1,16 @@
+{
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I am Saulo Lohan Matoso Soares, a 25-year-old Software Engineer passionate about Full Stack development and technical leadership. With over two years of experience in the technology market, I have worked at companies focused on innovation and digital transformation, always aiming to create efficient, scalable solutions aligned with business needs.",
+      
+      "Throughout my career, I have participated in projects in the areas of innovation, logistics, optimization, and research, contributing both on the front-end and back-end, always focused on applying best practices such as SOLID, Clean Code, Clean Architecture, and DDD. I have experience building RESTful APIs, microservices, messaging with RabbitMQ, tracking with Elasticsearch, as well as modeling and optimizing relational and non-relational databases (SQL Server, PostgreSQL, and MongoDB).",
+      
+      "I have worked as a technical lead, responsible for setting standards, code reviews, mentoring developers, and leading strategic decisions alongside product, QA, and architecture teams. I have also taken on team coordination roles, with experience in prioritizing technical backlog and facilitating deliveries using agile methodologies like Scrum and Kanban.",
+      
+      "As a developer and co-founder of an on-demand development startup, I work directly on creating customized solutions using technologies such as C#, .NET, ReactJS, Tailwind CSS, TypeScript, among others, with a focus on delivering value to the client through efficient and well-structured technology.",
+      
+      "I am driven by innovation, constant learning, and the pursuit of challenges that push my technical and professional growth. I believe in the power of collaboration, positive leadership, and well-applied software engineering to create real impact in products and people."
+    ]
+  }
+}

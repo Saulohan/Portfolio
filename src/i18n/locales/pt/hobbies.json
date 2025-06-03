@@ -1,0 +1,32 @@
+{
+  "hobbies": {
+    "title": "Hobbies & Interesses",
+    "intro": "Quando não estou programando, gosto de explorar outras paixões que contribuem para meu crescimento pessoal e criatividade. Acredito que hobbies diversificados enriquecem nossa perspectiva profissional.",
+    "items": {
+      "programming": {
+        "name": "Programação",
+        "description": "Criação de projetos pessoais, aprendizado contínuo e contribuição em comunidades open source."
+      },
+      "games": {
+        "name": "Jogos Estratégicos",
+        "description": "Aprimoramento de raciocínio lógico, foco e tomada de decisão em ambientes competitivos."
+      },
+      "workout": {
+        "name": "Musculação",
+        "description": "Disciplina e constância com treinos regulares para bem-estar físico e mental."
+      },
+      "reading": {
+        "name": "Leitura",
+        "description": "Exploração de livros técnicos, ficção científica, fantasia, que estimulam a criatividade e a imaginação."
+      },
+      "running": {
+        "name": "Corrida",
+        "description": "Prática de exercícios aeróbicos para aumentar a resistência, foco e saúde mental."
+      },
+      "coffee": {
+        "name": "Café & Tecnologia",
+        "description": "Combinação ideal para concentração e produtividade durante sessões de desenvolvimento."
+      }
+    }
+  }
+}

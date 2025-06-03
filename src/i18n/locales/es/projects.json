@@ -1,0 +1,80 @@
+{
+  "projects": {
+    "title": "Proyectos Desarrollados",
+    "buttonCode": "Código",
+    "buttonViewProject": "Ver Proyecto",
+    "buttonUnavailable": "Este proyecto no está disponible en línea en este momento.",
+    "featuresLabel": "Principales Funcionalidades",
+    "technologiesLabel": "Tecnologías",
+    "descriptionLabel": "Descripción Completa",
+    "featuredProjectsLabel": "Proyectos Destacados",
+    "allProjectsLabel": "Todos los Proyectos",
+    "pokedex": {
+      "shortDescription": "Aplicación web que muestra todos los Pokémon de la API pública PokéAPI en formato de tarjetas.",
+      "fullDescription": "Este proyecto personal consiste en una Pokédex interactiva que consume la PokéAPI para listar todos los Pokémon disponibles. Cada Pokémon se muestra en una tarjeta que contiene imagen, número, nombre y tipos. La interfaz fue construida con foco en un diseño limpio, responsivo y fácil de usar. El fondo tiene un degradado suave, y las tarjetas están estilizadas según el tipo de Pokémon para facilitar la visualización. La aplicación es completamente estática, hecha con HTML, CSS y JavaScript puro, sin uso de frameworks.",
+      "features": [
+        "Consumo de API externa (PokéAPI)",
+        "Renderizado dinámico de todos los Pokémon",
+        "Tarjetas personalizadas por tipo de Pokémon",
+        "Diseño responsivo con estilo moderno"
+      ],
+      "team": "1 persona"
+    },
+    "shortUrls": {
+      "shortDescription": "Aplicación web para acortar enlaces largos.",
+      "fullDescription": "El proyecto Short-URLs es una aplicación web que permite a los usuarios acortar URLs largas y compartirlas de forma más conveniente. Con solo unos clics, puedes transformar URLs complejas en enlaces cortos y fáciles de recordar. Además, el proyecto también ofrece estadísticas básicas sobre el número de clics en cada URL acortada, proporcionando información útil sobre el rendimiento de tus enlaces compartidos.",
+      "features": [
+        "Acortamiento de URLs con interfaz simple",
+        "Diseño responsivo para diferentes dispositivos"
+      ],
+      "team": "2 personas"
+    },
+    "taskManager": {
+      "shortDescription": "API robusta para la gestión de proyectos y tareas, con enfoque en pruebas, escalabilidad y buenas prácticas de arquitectura.",
+      "fullDescription": "TaskManager es una aplicación backend desarrollada con .NET 8 que ofrece funcionalidades completas para el control de proyectos y tareas, orientada a la productividad de equipos e individuos. El proyecto incluye funciones como creación de proyectos, tareas, comentarios, generación de informes y endpoints documentados con Swagger. Fue estructurado con foco en escalabilidad, pruebas automatizadas y posibilidad de evolución a microservicios y observabilidad.",
+      "features": [
+        "Creación, edición y eliminación de proyectos y tareas con control de relaciones",
+        "Creación de comentarios vinculados a tareas",
+        "Generación de informes de rendimiento por proyecto",
+        "Documentación completa de endpoints con Swagger",
+        "Pruebas unitarias implementadas con XUnit y Moq, con cobertura de servicios",
+        "Ejecución vía Docker con build local o imagen publicada en Docker Hub"
+      ],
+      "team": "1 persona"
+    },
+    "tranningTutor": {
+      "shortDescription": "Aplicación móvil con pantallas de inicio de sesión y registro desarrollada en React Native como parte del aprendizaje en desarrollo móvil.",
+      "fullDescription": "Tranning Tutor es un proyecto móvil enfocado en la creación de pantallas de autenticación (inicio de sesión y registro) utilizando React Native. Desarrollado con el objetivo de practicar conceptos fundamentales del desarrollo móvil multiplataforma, el proyecto explora la creación de interfaces responsivas, navegación entre pantallas, gestión de estado y validación de formularios.",
+      "features": [
+        "Pantalla de inicio de sesión con validación de correo y contraseña",
+        "Pantalla de registro con campos de nombre, correo, contraseña y confirmación",
+        "Navegación entre pantallas utilizando React Navigation",
+        "Diseño responsivo y estilización con Styled Components",
+        "Formularios con validación básica de entrada de datos"
+      ],
+      "team": "1 persona"
+    },
+    "rocketNotes": {
+      "shortDescription": "Sistema de gestión de notas personales con React, desarrollado como parte del curso Explorer de Rocketseat.",
+      "fullDescription": "RocketNotes es un sistema para organizar y gestionar notas personales. El proyecto fue construido usando React durante el módulo de React del curso Explorer de Rocketseat. Cuenta con una interfaz moderna y responsiva donde el usuario puede autenticarse, crear, ver, editar y eliminar notas. Fue una oportunidad práctica para aplicar conceptos fundamentales de desarrollo Front-End con React, como componentes, routing y estado.",
+      "features": [
+        "Pantalla de inicio de sesión con validación de usuario",
+        "Pantalla de registro con campos de nombre, correo y contraseña",
+        "Panel con listado de notas",
+        "Creación y edición de nuevas notas",
+        "Visualización detallada y eliminación de notas"
+      ],
+      "team": "1 persona"
+    },
+    "animeInfo": {
+      "shortDescription": "Un sitio moderno que consume una API para mostrar información detallada sobre animes populares y recientes.",
+      "fullDescription": "Anime INFO es un proyecto frontend desarrollado para ofrecer una interfaz intuitiva y atractiva que lista animes, mostrando detalles como sinopsis, género, calificaciones e imágenes. El sitio consume datos de una API externa y presenta una experiencia dinámica y responsiva para los usuarios, facilitando el descubrimiento y búsqueda de animes.",
+      "features": [
+        "Listado paginado de animes con detalles completos",
+        "Búsqueda y filtro por género y popularidad",
+        "Diseño responsivo para dispositivos móviles y de escritorio"
+      ],
+      "team": "1 persona"
+    }
+  }
+}

@@ -5,10 +5,13 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import projectsData from '../data/projectsData.json';
 
 const Projects = () => {
   const [openProjects, setOpenProjects] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const { t: textTranslated, i18n } = useTranslation(('projects'));
 
   const toggleProject = (projectId: string) => {
     setOpenProjects(prev => 
@@ -18,173 +21,22 @@ const Projects = () => {
     );
   };
 
-  const allProjects = [
-    {
-        id: "Pokedex",
-        title: "Pokédex",
-        category: "Frontend",
-        period: "2022",
-        team: "1 pessoa",
-        image: "/images/pokedex-background.png" ,
-        shortDescription: "Aplicação web que exibe todos os Pokémons da API pública PokéAPI em formato de cards.",
-        fullDescription: `Este projeto pessoal consiste em uma Pokédex interativa que consome a PokéAPI para listar todos os Pokémons disponíveis.
-            Cada Pokémon é exibido em um card contendo imagem, número, nome e tipos. A interface foi construída com foco em design limpo, responsividade e fácil usabilidade.
-            O background possui um gradiente suave, e os cards são estilizados conforme o tipo do Pokémon para facilitar a visualização.
-            A aplicação é totalmente estática, feita com HTML, CSS e JavaScript puro, sem uso de frameworks.`,
-        technologies: ["HTML", "CSS", "JavaScript", "PokéAPI"],
-        features: [
-            "Consumo de API externa (PokéAPI)",
-            "Renderização dinâmica de todos os Pokémons",
-            "Cards personalizados por tipo de Pokémon",
-            "Layout responsivo com design moderno"
-        ],
-        liveUrl: "Não se encontra publicado atualmente",
-        githubUrl: "https://github.com/Saulohan/Pokedex",
-        featured: false,
-        isDeployed: false
-    },
-    {
-      id: "shortUrls",
-      title: "Short URLs",
-      category: "Frontend",
-      period: "2023",
-      team: "2 pessoas",
-      image: "/images/URLShortcuts-background.png",
-      shortDescription: "Aplicação web para encurtar links longos.",
-      fullDescription: `O projeto Short-URLs é uma aplicação web que permite aos usuários encurtarem URLs longas e compartilhá-las de forma mais conveniente.
-        Com apenas alguns cliques, você pode transformar URLs complexas em links curtos e fáceis de lembrar. Além disso, o projeto também oferece estatísticas
-        básicas sobre o número de cliques em cada URL encurtada, fornecendo insights úteis sobre o desempenho das suas URLs compartilhadas.`,
-      technologies: ["HTML", "CSS", "JavaScript", "PokéAPI"],
-      features: [
-        "Encurtamento de URLs com interface simples",
-        "Design responsivo para diferentes dispositivos"
-      ],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/LagCompany/Short-URLs",
-      featured: true,
-      isDeployed: false
-    },
-    {
-        id: "taskManager",
-        title: "TaskManager",
-        category: "Backend",
-        period: "2025",
-        team: "1 pessoa",
-        image: "/images/taskManager-background.png" ,
-        shortDescription: "API robusta para gerenciamento de projetos e tarefas, com foco em testes, escalabilidade e boas práticas de arquitetura.",
-        fullDescription: `O TaskManager é uma aplicação backend desenvolvida com .NET 8 que oferece funcionalidades completas para controle
-            de projetos e tarefas, voltada à produtividade de equipes e indivíduos.
-            O projeto conta com recursos como criação de projetos, tarefas, comentários, geração de relatórios e endpoints documentados com Swagger.
-            Além disso, foi estruturado com foco em escalabilidade, testes automatizados e possibilidade de evolução para microsserviços e observabilidade.`,
-        technologies: [
-            ".NET 8",
-            "Entity Framework Core",
-            "SQL Server",
-            "Docker",
-            "XUnit",
-            "Swagger",
-            "Docker",
-            "GitHub Actions (CI)",
-        ],
-        features: [
-            "Criação, edição e exclusão de projetos e tarefas com controle de relacionamento",
-            "Criação de comentários vinculados às tarefas",
-            "Geração de relatórios de desempenho por projeto",
-            "Documentação completa dos endpoints com Swagger",
-            "Testes unitários implementados com XUnit e Moq, com cobertura de serviços",
-            "Execução via Docker com build local ou imagem publicada no Docker Hub",
-        ],
-        liveUrl: "http://localhost:8080/swagger",
-        githubUrl: "https://github.com/Saulohan/TaskManager",
-        featured: true,
-        isDeployed: false
-    },
-    {
-        id: "tranningTutor",
-        title: "Tranning Tutor",
-        category: "Mobile",
-        period: "2024",
-        team: "1 pessoa",
-        image: "/images/appPersonal-background.png", 
-        shortDescription: "Aplicativo mobile com telas de login e cadastro desenvolvido em React Native como parte do aprendizado em desenvolvimento mobile.",
-        fullDescription: `O Tranning Tutor é um projeto mobile focado na criação das telas de autenticação (login e cadastro) utilizando React Native.
-        Desenvolvido com o objetivo de praticar os conceitos fundamentais do desenvolvimento mobile cross-platform, o projeto explora a criação de interfaces responsivas,
-        navegação entre telas, gerenciamento de estado e validação de formulários.`,
-        technologies: [
-            "React Native",
-            "Expo",
-            "React Navigation",
-            "TypeScript",
-            "Styled Components"
-        ],
-        features: [
-            "Tela de login com validação de e-mail e senha", //AJUSTA
-            "Tela de cadastro com campos de nome, e-mail, senha e confirmação", //ajustar
-            "Navegação entre telas utilizando React Navigation",
-            "Design responsivo e estilização com Styled Components",
-            "Formulários com validação básica de entrada de dados"
-        ],
-        liveUrl: "",
-        githubUrl: "",//commitar
-        featured: true,
-        isDeployed: false
-    },
-    {
-        id: "rocketNotes",
-        title: "RocketNotes",
-        category: "Frontend",
-        period: "2023",
-        team: "1 pessoa",
-        image: "/images/rocketNotes-background.png", 
-        shortDescription: "Sistema de gerenciamento de notas pessoais com React, desenvolvido como parte do curso Explorer da Rocketseat.",
-        fullDescription: `RocketNotes é um sistema para organização e gerenciamento de notas pessoais. O projeto foi construído utilizando React durante o módulo de React do curso Explorer da Rocketseat.
-        Ele conta com uma interface moderna e responsiva, onde o usuário pode realizar autenticação, criar, visualizar, editar e excluir notas.
-        Foi uma oportunidade prática de aplicar os conceitos fundamentais de desenvolvimento Front-End com React, como componentes, roteamento e estado.`,
-        technologies: [
-            "React",
-            "JavaScript",
-            "Vite",
-            "React Router",
-            "Styled Components"
-        ],
-        features: [
-            "Tela de login com validação de usuário",
-            "Tela de cadastro com campos de nome, e-mail e senha",
-            "Dashboard com listagem de notas",
-            "Criação e edição de novas notas",
-            "Visualização detalhada e exclusão de notas"
-        ],
-        liveUrl: "",
-        githubUrl: "https://github.com/Saulohan/Projeto_RocketNotes",
-        featured: false,
-        isDeployed: false
-    },
-    {
-        id: "animeInfo",
-        title: "Anime INFO",
-        category: "Frontend",
-        period: "2023",
-        team: "1 pessoa",
-        image: "/images/animeInfo-background.png", 
-        shortDescription: "Um site moderno que consome uma API para exibir informações detalhadas sobre animes populares e recentes.",
-        fullDescription: `Anime INFO é um projeto frontend desenvolvido para fornecer uma interface intuitiva e atraente que lista animes,
-            exibindo detalhes como sinopse, gênero, avaliações e imagens. O site consome dados de uma API externa e apresenta uma experiência dinâmica e 
-            responsiva para os usuários, facilitando a descoberta e pesquisa de animes.`,
-        technologies: [
-            ["HTML", "CSS", "JavaScript", "AniList API"],
-        ],
-        features: [
-            "Listagem paginada de animes com detalhes completos",
-            "Busca e filtro por gênero e popularidade",
-            "Layout responsivo para dispositivos móveis e desktop"
-        ],
-        liveUrl: "https://saulohan.github.io/AnimesList/",
-        githubUrl: "https://github.com/Saulohan/AnimesList",
-        featured: false,
-        isDeployed: true
-    }
-
-  ];
+  const allProjects = projectsData.projects.map(item => ({
+    id: item.id,
+    title: item.title,
+    category: item.category,
+    period: item.period,
+    team: textTranslated(`projects.${item.id}.team`),
+    image: item.image,
+    shortDescription: textTranslated(`projects.${item.id}.shortDescription`),
+    fullDescription: textTranslated(`projects.${item.id}.fullDescription`),
+    technologies: item.technologies,
+    features: textTranslated(`projects.${item.id}.features`, { returnObjects: true }) as string[], 
+    liveUrl: item.liveUrl,
+    githubUrl: item.githubUrl,
+    featured: item.featured,
+    isDeployed: item.isDeployed,
+  }));
 
   const featuredProjects = allProjects.filter(project => project.featured);
   
@@ -256,7 +108,7 @@ const Projects = () => {
             <CollapsibleContent className="mt-4">
               <div className="border-t border-border pt-4 space-y-4">
                 <div>
-                  <h4 className="font-semibold text-card-foreground mb-2">Descrição Completa</h4>
+                  <h4 className="font-semibold text-card-foreground mb-2">{textTranslated(`projects.descriptionLabel`)}</h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {project.fullDescription}
                   </p>
@@ -265,7 +117,7 @@ const Projects = () => {
                 <div>
                   <h4 className="font-semibold text-card-foreground mb-2 flex items-center gap-2">
                     <Code className="w-4 h-4" />
-                    Tecnologias
+                    {textTranslated(`projects.technologiesLabel`)}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, index) => (
@@ -277,7 +129,7 @@ const Projects = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-card-foreground mb-2">Principais Funcionalidades</h4>
+                  <h4 className="font-semibold text-card-foreground mb-2">{textTranslated(`projects.featuresLabel`)}</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.features.map((feature, index) => (
                       <span key={index} className="bg-green-100 text-green-800 dark:bg-green-600 dark:text-green-100 px-2 py-1 rounded text-xs font-medium">
@@ -296,7 +148,7 @@ const Projects = () => {
                       className="flex items-center gap-2 bg-blue-600 text-white dark:bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      Ver Projeto
+                      {textTranslated(`projects.buttonViewProject`)}
                     </a>
                   ) : (
                     <TooltipProvider>
@@ -304,11 +156,11 @@ const Projects = () => {
                         <TooltipTrigger asChild>
                           <div className="flex items-center gap-2 bg-gray-400 dark:bg-gray-700 text-white px-4 py-2 rounded-lg cursor-not-allowed text-sm font-medium opacity-60">
                             <Info className="w-4 h-4" />
-                            Ver Projeto
+                            {textTranslated(`projects.buttonViewProject`)}
                           </div>
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p>Este projeto não está disponível online no momento.</p>
+                          <p>{textTranslated(`projects.buttonUnavailable`)}</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
@@ -320,7 +172,7 @@ const Projects = () => {
                     className="flex items-center gap-2 bg-black text-white dark:bg-purple-900 dark:hover:bg-purple-800 px-4 py-2 rounded-lg transition-colors text-sm font-medium"
                   >
                     <Github className="w-4 h-4" />
-                    Código
+                    {textTranslated(`projects.buttonCode`)}
                   </a>
                 </div>
               </div>
@@ -335,13 +187,13 @@ const Projects = () => {
     <section className="py-20 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 text-foreground">
-          Projetos Desenvolvidos
+          {textTranslated(`projects.title`)}
         </h2>
         
         <Tabs defaultValue="destaques" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8 bg-gray-300 dark:bg-gray-600">
-            <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-white dark:data-[state=active]:text-black" value="destaques">Projetos em Destaque</TabsTrigger>
-            <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-white dark:data-[state=active]:text-black" value="todos">Todos os Projetos</TabsTrigger>
+            <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-white dark:data-[state=active]:text-black" value="destaques">{textTranslated(`projects.featuredProjectsLabel`)}</TabsTrigger>
+            <TabsTrigger className="data-[state=active]:bg-blue-600 data-[state=active]:text-white dark:data-[state=active]:bg-white dark:data-[state=active]:text-black" value="todos">{textTranslated(`projects.allProjectsLabel`)}</TabsTrigger>
           </TabsList>
           
           <TabsContent value="destaques">

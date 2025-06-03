@@ -1,0 +1,46 @@
+{
+  "items": [
+    { "id": "experience1",     "currently": true,     "name": "forlogic" },
+    { "id": "experience2",     "currently": false,    "name": "resolutis" },
+    { "id": "experience3",     "currently": false,    "name": "fitbank" }
+
+  ],
+  "certifications": [
+    {
+        "id": "certification1",
+        "name": "Impulso FullStack Web Developer",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/A9FBEADE.pdf"
+    },
+    {
+        "id": "certification2",
+        "name": "Codecamp | 1st Edition",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/5F0DE057.pdf"
+    },
+    {
+        "id": "certification3",
+        "name": "Fortaleza dos CodeMiners",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/237F5855.pdf"
+    },
+    {
+        "id": "certification4",
+        "name": "Formação Scrum Master Certification",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/D801EA92.pdf"
+    },
+    {
+        "id": "certification5",
+        "name": "Formação HTML Web Developer",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/E00FF4A2.pdf"
+    },
+    {
+        "id": "certification6",
+        "name": "Formação JavaScript Developer",
+        "institution": "Digital Innovation One",
+        "linkCertificate": "https://hermes.dio.me/certificates/70C299D3.pdf"
+    }
+  ]
+}

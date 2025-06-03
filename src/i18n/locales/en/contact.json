@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "sectionTitle": "Let's Talk?",
+    "contactTitle": "Get in Touch",
+    "contactDescription": "I am always open to new opportunities and interesting projects. If you have an idea or want to discuss a collaboration, don't hesitate to reach out!",
+    "location": "Location",
+    "formTitle": "Send a Message",
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your full name",
+      "emailPlaceholder": "your@email.com",
+      "titleLabel": "Subject",
+      "titlePlaceholder": "Message subject",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Your message...",
+      "sendButton": "Send Message",
+      "validationAlert": "Please fill in all fields",
+      "successAlert": "Message sent successfully!",
+      "errorAlert": "Error sending message."
+    }
+  }
+}

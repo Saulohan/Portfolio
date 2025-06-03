@@ -1,0 +1,88 @@
+{
+  "experiences": {
+    "title": "Experiencia y Certificaciones",
+    "subTitle": "Trayectoria Profesional",
+    "companies": {
+      "forlogic": {
+        "company": "Forlogic",
+        "location": "Remoto",
+        "positions": [
+          {
+            "title": "FullStack Developer",
+            "period": "2025 - Actualmente",
+            "description": "Desarrollo y evolución de nuevos productos utilizando arquitectura CQRS con ASP.NET Core y Entity Framework en el backend, y TypeScript, Angular y componentes Syncfusion en el frontend. Mantenimiento y soporte a sistemas heredados con tecnologías como ASP.NET MVC y Ext JS.",
+            "technologies": ["Angular", ".Net", "Azure", "SQL Server"]
+          }
+        ]
+      },
+      "resolutis": {
+        "company": "Resolutis Core",
+        "location": "Remoto",
+        "positions": [
+          {
+            "title": "CTO / Developer and Co-Founder",
+            "period": "2023 - Actualmente",
+            "description": "Planificación y definición de la arquitectura garantizando escalabilidad, seguridad y alta disponibilidad. Modelado e implementación de base de datos PostgreSQL, incluyendo diagramación y optimización de consultas. Automatización de procesos con CI/CD para integración y entrega continua. Desarrollo backend con .NET aplicando principios SOLID y Arquitectura Limpia. Desarrollo frontend con ReactJS y Tailwind para interfaces responsivas y de alto rendimiento. Liderazgo técnico y decisiones estratégicas alineadas con los objetivos del negocio.",
+            "technologies": [".NET", "PostgreSQL", "ReactJS", "Tailwind", "CI/CD"]
+          }
+        ]
+      },
+      "fitbank": {
+        "company": "FitBank 450",
+        "location": "Remoto",
+        "positions": [
+          {
+            "title": "Tech Lead",
+            "period": "2024 - 2025",
+            "description": "Liderazgo técnico del equipo de desarrollo, con foco en la definición de arquitectura escalable y sostenible, revisión de código, mentoría y soporte técnico a desarrolladores. Responsable por la elección de tecnologías, gestión del pipeline CI/CD con Azure, implementación de pruebas automatizadas (unitarias, integración y E2E) y promoción de buenas prácticas de desarrollo. Conducción de reuniones técnicas, talleres, evaluación de riesgos técnicos y facilitación de la comunicación entre equipos. Rol estratégico para garantizar la escalabilidad, performance y alineación con los objetivos del negocio. Asumió la coordinación temporal durante la ausencia del liderazgo formal.",
+            "technologies": [
+              "Liderazgo Técnico", "Desarrollo de Software", "Desarrollo Full Stack",
+              "Gestión de Proyectos", "Revisión de Código", "Buenas Prácticas de Programación",
+              "Código Limpio", "Principios SOLID", "Scrum", "Metodologías Ágiles", ".NET Framework",
+              "C#", "JavaScript", "HTML5", "jQuery", "Razor (ASP.NET)", "Postman", "Azure DevOps",
+              "Git", "Redis", "RabbitMQ", "Elasticsearch", "Microservicios", "Microsoft SQL Server", "Base de Datos"
+            ]
+          },
+          {
+            "title": "Systems Developer",
+            "period": "2022 - 2024",
+            "description": "Desarrollo de sistemas y microservicios escalables y de alto rendimiento. Implementación y mantenimiento de interfaces frontend utilizando CSHTML, JavaScript y arquitectura MVC. Creación, optimización y aseguramiento de APIs REST. Trabajo con .NET, C#, SQL Server, MongoDB y metodologías ágiles. Aplicación de principios SOLID, Código Limpio y patrones de diseño (Builder, Strategy, Factory, Singleton, Iterator). Uso de RabbitMQ para comunicación asíncrona entre microservicios y Elasticsearch para registro y monitoreo de logs. Implementación de pruebas unitarias para asegurar la calidad del código.",
+            "technologies": [
+              ".NET Core", ".NET Framework", "C#", "JavaScript", "HTML5", "CSS", "jQuery",
+              "Razor (ASP.NET)", "CSHTML", "Microsoft SQL Server", "MongoDB", "RabbitMQ",
+              "Elasticsearch", "Azure DevOps Server", "Postman", "APIs RESTful", "Microservicios",
+              "Código Limpio", "Principios SOLID", "Metodologías Ágiles (Scrum y Kanban)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+    "certifications": {
+        "subTitle": "Certificaciones",
+        "certification1": {
+            "title": "Impulso FullStack Web Developer",
+            "status": "Completado"
+        },
+        "certification2": {
+            "title": "Codelaany | 1ª Edição", 
+            "status": "Completado"
+        },
+        "certification3": {
+            "title": "Fortaleza dos CodeMiners", 
+            "status": "Completado"
+        },
+        "certification4": {
+            "title": "Formação Scrum Master Certification",
+            "status": "Completado"
+        },
+        "certification5": {
+            "title": "Formação HTML Web Developer",
+            "status": "Completado"
+        },
+        "certification6": {
+            "title": "Formação JavaScript Developer",
+            "status": "Completado"
+        }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "projects": [
+    { "id": "pokedex", "title": "Pokédex", "category": "Frontend", "period": "2022", "image": "/images/pokedex-background.png", "technologies": ["HTML", "CSS", "JavaScript", "PokéAPI"], "liveUrl": "Não se encontra publicado atualmente", "githubUrl": "https://github.com/Saulohan/Pokedex", "featured": false, "isDeployed": false },
+    { "id": "shortUrls", "title": "Short URLs", "category": "Frontend", "period": "2023", "image": "/images/URLShortcuts-background.png", "technologies": ["HTML", "CSS", "JavaScript", "PokéAPI"], "liveUrl": "https://example.com", "githubUrl": "https://github.com/LagCompany/Short-URLs", "featured": true, "isDeployed": false },
+    { "id": "taskManager", "title": "TaskManager", "category": "Backend", "period": "2025", "image": "/images/taskManager-background.png", "technologies": [".NET 8", "Entity Framework Core", "SQL Server", "Docker", "XUnit", "Swagger", "Docker", "GitHub Actions (CI)"], "liveUrl": "http://localhost:8080/swagger", "githubUrl": "https://github.com/Saulohan/TaskManager", "featured": true, "isDeployed": false },
+    { "id": "tranningTutor", "title": "Tranning Tutor", "category": "Mobile", "period": "2024", "image": "/images/appPersonal-background.png", "technologies": ["React Native", "Expo", "React Navigation", "TypeScript", "Styled Components"], "liveUrl": "", "githubUrl": "", "featured": true, "isDeployed": false },
+    { "id": "rocketNotes", "title": "RocketNotes", "category": "Frontend", "period": "2023", "image": "/images/rocketNotes-background.png", "technologies": ["React", "JavaScript", "Vite", "React Router", "Styled Components"], "liveUrl": "", "githubUrl": "https://github.com/Saulohan/Projeto_RocketNotes", "featured": false, "isDeployed": false },
+    { "id": "animeInfo", "title": "Anime INFO", "category": "Frontend", "period": "2023", "image": "/images/animeInfo-background.png", "technologies": ["HTML", "CSS", "JavaScript", "AniList API"], "liveUrl": "https://saulohan.github.io/AnimesList/", "githubUrl": "https://github.com/Saulohan/AnimesList", "featured": false, "isDeployed": true }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "about": {
+    "title": "Sobre Mim",
+    "paragraphs": [
+      "Sou Saulo Lohan Matoso Soares, Engenheiro de Software com 25 anos, apaixonado por desenvolvimento Full Stack e liderança técnica. Com mais de dois anos de experiência no mercado de tecnologia, atuei em empresas de inovação e transformação digital, sempre com foco em criar soluções eficientes, escaláveis e alinhadas às necessidades de negócio.",
+      
+      "Ao longo da minha trajetória, participei de projetos nas áreas de inovação, logística, otimização e pesquisa, contribuindo tanto no front-end quanto no back-end, sempre com foco em aplicar boas práticas como SOLID, Clean Code, Clean Architecture e DDD. Tenho experiência com construção de APIs RESTful, microsserviços, mensageria com RabbitMQ, rastreamento com Elasticsearch, além de modelagem e otimização de bancos de dados relacionais e não relacionais (SQL Server, PostgreSQL e MongoDB).",
+      
+      "Já atuei como líder técnico, sendo responsável por definição de padrões, revisão de código, mentoria de desenvolvedores e condução de decisões estratégicas em conjunto com áreas de produto, QA e arquitetura. Também assumi funções de coordenação de times, com experiência em priorização de backlog técnico e facilitação de entregas com metodologias ágeis como Scrum e Kanban.",
+      
+      "Como desenvolvedor e co-fundador de uma startup voltada ao desenvolvimento sob demanda, trabalho diretamente na criação de soluções personalizadas, utilizando tecnologias como C#, .NET, ReactJS, Tailwind CSS, TypeScript, entre outras, com foco em entregar valor ao cliente por meio de tecnologia eficiente e bem estruturada.",
+      
+      "Sou movido por inovação, aprendizado constante e pela busca por desafios que impulsionem meu crescimento técnico e profissional. Acredito no poder da colaboração, da liderança positiva e da engenharia de software bem aplicada para gerar impacto real nos produtos e nas pessoas."
+    ]
+  }
+}

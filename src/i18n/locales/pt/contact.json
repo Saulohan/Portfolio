@@ -1,0 +1,22 @@
+{
+  "contact": {
+    "sectionTitle": "Vamos Conversar?",
+    "contactTitle": "Entre em Contato",
+    "contactDescription": "Estou sempre aberto a novas oportunidades e projetos interessantes. Se você tem uma ideia ou quer discutir uma colaboração, não hesite em entrar em contato!",
+    "location": "Localização",
+    "formTitle": "Envie uma Mensagem",
+    "form": {
+      "nameLabel": "Nome",
+      "namePlaceholder": "Seu nome completo",
+      "emailPlaceholder": "seu@email.com",
+      "titleLabel": "Assunto",
+      "titlePlaceholder": "Assunto da mensagem",
+      "messageLabel": "Mensagem",
+      "messagePlaceholder": "Sua mensagem...",
+      "sendButton": "Enviar Mensagem",
+      "validationAlert": "Preencha todos os campos",
+      "successAlert": "Mensagem enviada com sucesso!",
+      "errorAlert": "Erro ao enviar a mensagem."
+    }
+  }
+}

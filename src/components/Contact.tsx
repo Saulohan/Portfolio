@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-
+  const { t: textTranslated, i18n } = useTranslation(('contact'));
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [title, setTitle] = useState('');
@@ -47,15 +48,14 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     <section className="py-20 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16">
-          Vamos Conversar?
+          {textTranslated('contact.sectionTitle')}
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
-            <h3 className="text-2xl font-bold mb-8">Entre em Contato</h3>
+            <h3 className="text-2xl font-bold mb-8">{textTranslated('contact.contactTitle')}</h3>
             <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-              Estou sempre aberto a novas oportunidades e projetos interessantes. 
-              Se você tem uma ideia ou quer discutir uma colaboração, não hesite em entrar em contato!
+              {textTranslated('contact.contactDescription')}
             </p>
             
             <div className="space-y-6">
@@ -84,7 +84,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="font-semibold text-secondary-foreground">Localização</p>
+                  <p className="font-semibold text-secondary-foreground">{textTranslated('contact.location')}</p>
                   <p className="text-muted-foreground">Russas, Ceará, Brasil</p>
                 </div>
               </div>
@@ -114,15 +114,15 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
           </div>
           
           <div className="bg-card/50 dark:bg-white/5 backdrop-blur-sm border border-border rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 text-card-foreground">Envie uma Mensagem</h3>
+            <h3 className="text-2xl font-bold mb-6 text-card-foreground">{textTranslated('contact.formTitle')}</h3>
             
             <form className="space-y-6 form" onSubmit={sendEmail} ref={formRef}>
               <div>
-                <label className="block text-sm font-medium mb-2 text-card-foreground">Nome</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">{textTranslated('contact.form.nameLabel')}</label>
                 <input 
                   type="text" 
                   className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
-                  placeholder="Seu nome completo"
+                  placeholder={textTranslated('contact.form.namePlaceholder')}
                   name="from_name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -134,7 +134,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
                 <input 
                   type="email" 
                   className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
-                  placeholder="seu@email.com"
+                  placeholder={textTranslated('contact.form.emailPlaceholder')}
                   name="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -142,11 +142,11 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2 text-card-foreground">Assunto</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">{textTranslated('contact.form.titleLabel')}</label>
                 <input 
                   type="text" 
                   className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
-                  placeholder="Assunto da mensagem"
+                  placeholder={textTranslated('contact.form.titlePlaceholder')}
                   name="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
@@ -154,11 +154,11 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2 text-card-foreground">Mensagem</label>
+                <label className="block text-sm font-medium mb-2 text-card-foreground">{textTranslated('contact.form.messageLabel')}</label>
                 <textarea 
                   rows={5}
                   className="w-full px-4 py-3 transition-colors rounded-lg bg-background border border-border focus:border-primary focus:outline-none dark:bg-white/10 dark:border-white/20 dark:focus:border-blue-400" 
-                  placeholder="Sua mensagem..."
+                  placeholder={textTranslated('contact.form.messagePlaceholder')}
                   name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -167,7 +167,7 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
               
               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors">
                 <Send className="w-5 h-5" />
-                Enviar Mensagem
+                {textTranslated('contact.form.sendButton')}
               </Button>
             </form>
           </div>

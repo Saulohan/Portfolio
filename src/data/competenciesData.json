@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "id": "competencie1",     "level": 100,   "name": "Leadership" },
+    { "id": "competencie2",     "level": 95,    "name": "Teamwork" },
+    { "id": "competencie3",     "level": 90,    "name": "Empathy" },
+    { "id": "competencie4",     "level": 92,    "name": "Humility" },
+    { "id": "competencie5",     "level": 94,    "name": "Proactivity" },
+    { "id": "competencie6",     "level": 91,    "name": "Determination" },
+    { "id": "competencie7",     "level": 87,    "name": "Optimization" },
+    { "id": "competencie8",     "level": 89,    "name": "Analysis" },
+    { "id": "competencie9",     "level": 86,    "name": "Communication" },
+    { "id": "competencie10",    "level": 93,    "name": "Resilience" },
+    { "id": "competencie11",    "level": 92,    "name": "Decision Making" },
+    { "id": "competencie12",    "level": 94,    "name": "Mentoring" },
+    { "id": "competencie13",    "level": 93,    "name": "Critical Thinking" },
+    { "id": "competencie14",    "level": 92,    "name": "Responsibility" }
+  ]
+}
