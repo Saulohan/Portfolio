@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Flag from "react-world-flags";
+
 const languages = [
   { code: "pt", label: "Português", flagCode: "BR" },
   { code: "en", label: "English", flagCode: "US" },
@@ -9,6 +10,7 @@ const languages = [
 export default function LanguageSelector({ onChangeLanguage }: { onChangeLanguage: (code: string) => void }) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState(languages[0]);
+  const [openUp, setOpenUp] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -22,6 +24,22 @@ export default function LanguageSelector({ onChangeLanguage }: { onChangeLanguag
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const toggleDropdown = () => {
+    if (!ref.current) return;
+
+    const rect = ref.current.getBoundingClientRect();
+    const viewportHeight = window.innerHeight;
+    const dropdownHeight = 150;
+
+    if (viewportHeight - rect.bottom < dropdownHeight) {
+      setOpenUp(true);
+    } else {
+      setOpenUp(false);
+    }
+
+    setOpen((o) => !o);
+  };
+
   const handleSelect = (lang: typeof languages[0]) => {
     setSelected(lang);
     setOpen(false);
@@ -32,7 +50,7 @@ export default function LanguageSelector({ onChangeLanguage }: { onChangeLanguag
     <div ref={ref} className="relative inline-block text-left">
       <button
         type="button"
-        onClick={() => setOpen((o) => !o)}
+        onClick={toggleDropdown}
         className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-border bg-card text-sm cursor-pointer"
       >
         <Flag code={selected.flagCode} style={{ width: 20, height: 15 }} />
@@ -49,7 +67,7 @@ export default function LanguageSelector({ onChangeLanguage }: { onChangeLanguag
       </button>
 
       {open && (
-        <ul className="absolute right-0 mt-1 w-40 bg-card border border-border rounded-md shadow-lg z-50">
+        <ul  className={`absolute right-0 w-40 bg-card border border-border rounded-md shadow-lg z-50 ${openUp ? "bottom-full mb-1" : "mt-1"}`}>
           {languages.map((lang) => (
             <li
               key={lang.code}
