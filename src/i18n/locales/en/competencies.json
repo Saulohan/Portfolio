@@ -6,19 +6,20 @@
     },
     "items": {
       "competencie1": "Leadership",
-      "competencie2": "Teamwork",
-      "competencie3": "Empathy",
-      "competencie4": "Humility",
-      "competencie5": "Proactivity",
-      "competencie6": "Determination",
-      "competencie7": "Optimization",
-      "competencie8": "Analysis",
-      "competencie9": "Communication",
-      "competencie10": "Resilience",
-      "competencie11": "Decision Making",
-      "competencie12": "Mentoring",
-      "competencie13": "Critical Thinking",
-      "competencie14": "Responsibility"
+      "competencie2": "Mentoring",
+      "competencie3": "Teamwork",
+      "competencie4": "Proactivity",
+      "competencie5": "Decision Making",
+      "competencie6": "Adaptability",
+      "competencie7": "Communication",
+      "competencie8": "Resilience",
+      "competencie9": "Analysis",
+      "competencie10": "Empathy",
+      "competencie11": "Critical Thinking",
+      "competencie12": "Optimization",
+      "competencie13": "Determination",
+      "competencie14": "Responsibility",
+      "competencie15": "Humility"
     }
   }
 }

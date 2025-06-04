@@ -1,18 +1,19 @@
 {
   "items": [
-    { "id": "competencie1",     "level": 100,   "name": "Leadership" },
-    { "id": "competencie2",     "level": 95,    "name": "Teamwork" },
-    { "id": "competencie3",     "level": 90,    "name": "Empathy" },
-    { "id": "competencie4",     "level": 92,    "name": "Humility" },
-    { "id": "competencie5",     "level": 94,    "name": "Proactivity" },
-    { "id": "competencie6",     "level": 91,    "name": "Determination" },
-    { "id": "competencie7",     "level": 87,    "name": "Optimization" },
-    { "id": "competencie8",     "level": 89,    "name": "Analysis" },
-    { "id": "competencie9",     "level": 86,    "name": "Communication" },
-    { "id": "competencie10",    "level": 93,    "name": "Resilience" },
-    { "id": "competencie11",    "level": 92,    "name": "Decision Making" },
-    { "id": "competencie12",    "level": 94,    "name": "Mentoring" },
-    { "id": "competencie13",    "level": 93,    "name": "Critical Thinking" },
-    { "id": "competencie14",    "level": 92,    "name": "Responsibility" }
+    { "id": "competencie1",     "name": "Leadership",         "level": 95 },
+    { "id": "competencie2",     "name": "Mentoring",          "level": 92 },
+    { "id": "competencie3",     "name": "Teamwork",           "level": 90 },
+    { "id": "competencie4",     "name": "Proactivity",        "level": 88 },
+    { "id": "competencie5",     "name": "Decision Making",    "level": 87 },
+    { "id": "competencie6",     "name": "Adaptability" ,      "level": 86 },
+    { "id": "competencie7",     "name": "Communication",      "level": 85 },
+    { "id": "competencie8",     "name": "Resilience",         "level": 84 },
+    { "id": "competencie9",     "name": "Analysis",           "level": 82 },
+    { "id": "competencie10",    "name": "Empathy",            "level": 80 },
+    { "id": "competencie11",    "name": "Critical Thinking",  "level": 78 },
+    { "id": "competencie12",    "name": "Optimization",       "level": 76 },
+    { "id": "competencie13",    "name": "Determination",      "level": 75 },
+    { "id": "competencie14",    "name": "Responsibility",     "level": 73 },
+    { "id": "competencie15",    "name": "Humility",           "level": 72 }
   ]
 }

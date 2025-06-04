@@ -6,19 +6,20 @@
     },
     "items": {
       "competencie1": "Liderazgo",
-      "competencie2": "Trabajo en equipo",
-      "competencie3": "Empatía",
-      "competencie4": "Humildad",
-      "competencie5": "Proactividad",
-      "competencie6": "Determinación",
-      "competencie7": "Optimización",
-      "competencie8": "Análisis",
-      "competencie9": "Comunicación",
-      "competencie10": "Resiliencia",
-      "competencie11": "Toma de decisiones",
-      "competencie12": "Mentoría",
-      "competencie13": "Pensamiento crítico",
-      "competencie14": "Responsabilidad"
+      "competencie2": "Mentoría",
+      "competencie3": "Trabajo en equipo",
+      "competencie4": "Proactividad",
+      "competencie5": "Toma de decisiones",
+      "competencie6": "Adaptabilidad",
+      "competencie7": "Comunicación",
+      "competencie8": "Resiliencia",
+      "competencie9": "Análisis",
+      "competencie10": "Empatía",
+      "competencie11": "Pensamiento crítico",
+      "competencie12": "Optimización",
+      "competencie13": "Determinación",
+      "competencie14": "Responsabilidad",
+      "competencie15": "Humildad"
     }
   }
 }
