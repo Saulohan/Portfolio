@@ -34,18 +34,21 @@ export function ToggleSidebar() {
     <>
         {!isMobile ? (
             <>
-            <div className="fixed top-0 right-0 m-4 z-50 flex justify-end mb-6">
-                <LanguageSelector  onChangeLanguage={changeLanguage} />
-            </div>
-            <ThemeToggle className="fixed bottom-0 right-0 m-4 z-50" />
-            <a
-                href="https://buymeacoffee.com/saulohan"
-                target="_blank"
-                rel="noopener noreferrer"
-                title='Compre meu café'
-            >
-                <img src="/images/coffe.png" alt="café" className="w-12 h-12 fixed top-10 right-0 m-4 z-50 transition" />
-            </a>  
+
+                <a
+                    href="https://buymeacoffee.com/saulohan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title='Compre meu café'
+                >
+                    <img src="/images/coffe.png" alt="café" className="w-12 h-12 fixed top-0 right-0 m-4 z-50 transition" />
+                </a>  
+
+                <div className="fixed bottom-0 right-0 m-4 z-50 flex justify-end mb-6">
+                    <LanguageSelector  onChangeLanguage={changeLanguage} />
+                </div>
+
+                <ThemeToggle className="fixed bottom-10 right-0 m-4 z-50" />
             </> 
             ) : 
             (
@@ -53,19 +56,19 @@ export function ToggleSidebar() {
                 <button
                 ref={buttonRef}
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-10 -translate-y-1/4 right-0 z-50 w-5 h-10 bg-gray-600 text-white rounded-l-lg shadow-lg
-                            flex items-center justify-center transition-all duration-300 hover:bg-gray-600"
-
+                className={`fixed top-10 -translate-y-1/4 right-0 z-50 w-5 h-10 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-l-lg shadow-lg
+                            flex items-center justify-center transition-all duration-300 hover:bg-gray-600
+                            ${isOpen ? 'hidden' : ''}`}
                 aria-label={isOpen ? 'Abrir menu': 'Fechar menu' }
                 >
-                <span className="text-2xl select-none">
-                    {isOpen ? '>' : '<'}
+                <span className="text-2x2 select-none">
+                    {isOpen ? '>>' : '<<'}
                 </span>
                 </button>
 
                 <div 
                 ref={menuRef}
-                className={`fixed top-0 right-0 h-full w-60  bg-gray-200 bg-opacity-25 dark:bg-slate-900 dark:bg-opacity-50  shadow-lg p-6 pt-20  transition-transform duration-300 z-40
+                className={`fixed top-0 right-0 h-full w-40  bg-gray-200 bg-opacity-100 dark:bg-gray-900 dark:bg-opacity-100  shadow-lg p-6 pt-20  transition-transform duration-300 z-40
                     ${isOpen ?  '-translate-x-0' : 'translate-x-full'}`}
                 >   
                 <div className="">

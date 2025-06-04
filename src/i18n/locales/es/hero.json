@@ -1,5 +1,10 @@
 {
   "hero": {
-    "description": "Estudiante de <span class=\"text-blue-400 font-semibold\">Análisis y Desarrollo de Sistemas</span><br/>Especialista en <span class=\"text-purple-400 font-semibold\">Innovación y Transformación Digital</span><br/>👨‍💻 “<span class=\"font-semibold text-green-300\">Desarrollador Full Stack</span> creando soluciones escalables con tecnología y propósito”<br/>🧠 “<span class=\"font-semibold text-yellow-300\">Tech Lead</span> apasionado por el desarrollo, el liderazgo y la transformación digital”"
+    "description": [
+      "Estudiante de <span class=\"text-blue-600 dark:text-blue-400 font-semibold mb-2\">Análisis y Desarrollo de Sistemas</span>",
+      "Especialista en <span class=\"text-blue-600 dark:text-blue-400 font-semibold mb-2\">Innovación y Transformación Digital</span>",
+      "<span class=\"text-blue-600 dark:text-blue-400 font-semibold mb-2\">Desarrollador Full Stack</span> construyendo soluciones escalables con tecnología y propósito",
+      "<span class=\"text-blue-600 dark:text-blue-400 font-semibold mb-2\">Tech Lead</span> apasionado por el desarrollo, liderazgo y la transformación digital"
+    ]
   }
 }
